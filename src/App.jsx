@@ -1,8 +1,9 @@
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Homepage from "./components/Homepage";
 import ProductDetailsPage from "./components/ProductDetailsPage";
 
-function App() {
+const App = () => {
   return (
     <Router>
       <Routes>
@@ -11,6 +12,6 @@ function App() {
       </Routes>
     </Router>
   );
-}
+};
 
 export default App;
