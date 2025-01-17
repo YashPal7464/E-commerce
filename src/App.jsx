@@ -5,6 +5,7 @@ import Homepage from "./components/Homepage";
 import ProductDetailsPage from "./components/ProductDetailsPage";
 import Cart from "./components/Cart";
 import Navigation from "./components/Navigation";
+import CheckoutPage from "./components/CheckoutPage";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <Route path="/" element={<Homepage />} />
         <Route path="/product/:id" element={<ProductDetailsPage />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/checkout" element={<CheckoutPage/>}/>
       </Routes>
     </Router>
   );

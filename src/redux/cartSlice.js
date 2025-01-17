@@ -14,16 +14,14 @@ const cartSlice = createSlice({
       const existingItem = state.items.find((i) => i.id === item.id);
 
       if (existingItem) {
-        // If the item already exists in the cart, increase its quantity
         existingItem.quantity += 1;
         existingItem.totalPrice = existingItem.price * existingItem.quantity;
       } else {
-        // Add a new item with a default quantity of 1
         state.items.push({
           ...item,
-          image: item.images[0], // Use the first image from the images array
+          image: item.images[0],
           quantity: 1,
-          totalPrice: item.price, // Initialize total price
+          totalPrice: item.price,
         });
       }
     },
@@ -39,9 +37,12 @@ const cartSlice = createSlice({
         existingItem.totalPrice = existingItem.price * quantity;
       }
     },
+    clearCart: (state) => {
+      state.items = []; // Reset the cart to an empty array
+    },
   },
 });
 
-export const { addToCart, removeFromCart, updateQuantity } = cartSlice.actions;
+export const { addToCart, removeFromCart, updateQuantity, clearCart } = cartSlice.actions;
 
 export default cartSlice.reducer;
