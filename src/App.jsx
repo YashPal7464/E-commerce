@@ -7,6 +7,8 @@ import Cart from "./components/Cart";
 import Navigation from "./components/Navigation";
 import CheckoutPage from "./components/CheckoutPage";
 
+
+
 const App = () => {
   return (
     <Router>
